@@ -1,0 +1,137 @@
+{
+  "header": {
+    "logo": "AstraGrid",
+    "contactItems": [
+      {
+        "id": "phone",
+        "label": "+1 (800) 555-0199",
+        "href": "tel:+1-800-555-0199",
+        "type": "phone"
+      },
+      {
+        "id": "email",
+        "label": "contact@astragrid.io",
+        "href": "mailto:contact@astragrid.io",
+        "type": "email"
+      },
+      {
+        "id": "request-call",
+        "label": "Request Call",
+        "href": "#",
+        "type": "call"
+      }
+    ],
+    "navigation": [
+      {
+        "id": "services",
+        "title": "Services",
+        "href": "#",
+        "children": [
+          {
+            "id": "infra",
+            "title": "Infrastructure",
+            "href": "#",
+            "children": [
+              {
+                "id": "infra-hosting",
+                "title": "Cloud hosting",
+                "href": "#"
+              },
+              {
+                "id": "infra-backup",
+                "title": "Backup & recovery",
+                "href": "#"
+              },
+              {
+                "id": "infra-automation",
+                "title": "Automation",
+                "href": "#"
+              }
+            ]
+          },
+          {
+            "id": "security",
+            "title": "IT Security",
+            "href": "#",
+            "children": [
+              {
+                "id": "security-monitoring",
+                "title": "Monitoring",
+                "href": "#"
+              },
+              {
+                "id": "security-response",
+                "title": "Response",
+                "href": "#"
+              },
+              {
+                "id": "security-audit",
+                "title": "Audit",
+                "href": "#"
+              }
+            ]
+          },
+          {
+            "id": "server-storage",
+            "title": "Server & Storage",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "id": "insights",
+        "title": "Insights",
+        "href": "#",
+        "children": [
+          {
+            "id": "insights-news",
+            "title": "Industry News",
+            "href": "#"
+          },
+          {
+            "id": "insights-reports",
+            "title": "Reports",
+            "href": "#"
+          },
+          {
+            "id": "insights-learning",
+            "title": "Learning",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "id": "company",
+        "title": "Company",
+        "href": "#",
+        "children": [
+          {
+            "id": "company-about",
+            "title": "About us",
+            "href": "#"
+          },
+          {
+            "id": "company-team",
+            "title": "Team",
+            "href": "#"
+          },
+          {
+            "id": "company-careers",
+            "title": "Careers",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "id": "careers",
+        "title": "Careers",
+        "href": "#"
+      },
+      {
+        "id": "contact",
+        "title": "Contact",
+        "href": "#"
+      }
+    ]
+  }
+}
