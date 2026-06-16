@@ -1,137 +1,84 @@
 {
-  "header": {
-    "logo": "AstraGrid",
-    "contactItems": [
-      {
-        "id": "phone",
-        "label": "+1 (800) 555-0199",
-        "href": "tel:+1-800-555-0199",
-        "type": "phone"
-      },
-      {
-        "id": "email",
-        "label": "contact@astragrid.io",
-        "href": "mailto:contact@astragrid.io",
-        "type": "email"
-      },
-      {
-        "id": "request-call",
-        "label": "Request Call",
-        "href": "#",
-        "type": "call"
-      }
-    ],
-    "navigation": [
-      {
-        "id": "services",
-        "title": "Services",
-        "href": "#",
-        "children": [
-          {
-            "id": "infra",
-            "title": "Infrastructure",
-            "href": "#",
-            "children": [
-              {
-                "id": "infra-hosting",
-                "title": "Cloud hosting",
-                "href": "#"
-              },
-              {
-                "id": "infra-backup",
-                "title": "Backup & recovery",
-                "href": "#"
-              },
-              {
-                "id": "infra-automation",
-                "title": "Automation",
-                "href": "#"
-              }
-            ]
-          },
-          {
-            "id": "security",
-            "title": "IT Security",
-            "href": "#",
-            "children": [
-              {
-                "id": "security-monitoring",
-                "title": "Monitoring",
-                "href": "#"
-              },
-              {
-                "id": "security-response",
-                "title": "Response",
-                "href": "#"
-              },
-              {
-                "id": "security-audit",
-                "title": "Audit",
-                "href": "#"
-              }
-            ]
-          },
-          {
-            "id": "server-storage",
-            "title": "Server & Storage",
-            "href": "#"
-          }
-        ]
-      },
-      {
-        "id": "insights",
-        "title": "Insights",
-        "href": "#",
-        "children": [
-          {
-            "id": "insights-news",
-            "title": "Industry News",
-            "href": "#"
-          },
-          {
-            "id": "insights-reports",
-            "title": "Reports",
-            "href": "#"
-          },
-          {
-            "id": "insights-learning",
-            "title": "Learning",
-            "href": "#"
-          }
-        ]
-      },
-      {
-        "id": "company",
-        "title": "Company",
-        "href": "#",
-        "children": [
-          {
-            "id": "company-about",
-            "title": "About us",
-            "href": "#"
-          },
-          {
-            "id": "company-team",
-            "title": "Team",
-            "href": "#"
-          },
-          {
-            "id": "company-careers",
-            "title": "Careers",
-            "href": "#"
-          }
-        ]
-      },
-      {
-        "id": "careers",
-        "title": "Careers",
-        "href": "#"
-      },
-      {
-        "id": "contact",
-        "title": "Contact",
-        "href": "#"
-      }
-    ]
-  }
+  "slides": [
+    {
+      "id": 1,
+      "title": "Secure the Future",
+      "description": "AstraGrid builds resilient digital experiences with precision and care. We deliver transparent support and dependable systems.",
+      "image": "/img/home/slide/1.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Streamline Every Layer",
+      "description": "AstraGrid builds resilient digital experiences with precision and care. We deliver transparent support and dependable systems.",
+      "image": "/img/home/slide/2.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Design for Confidence",
+      "description": "AstraGrid builds resilient digital experiences with precision and care. We deliver transparent support and dependable systems.",
+      "image": "/img/home/slide/1.jpg"
+    }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "icon": "/img/_style/structur.png",
+      "title": "Infrastructure",
+      "description": "Our infrastructure team builds the backbone for digital operations. Every deployment is planned to keep systems stable, fast, and always reachable."
+    },
+    {
+      "id": 2,
+      "icon": "/img/_style/security.png",
+      "title": "IT Security",
+      "description": "IT security is a top priority, but many teams still treat it as a secondary concern. We help make protection practical and reliable."
+    },
+    {
+      "id": 3,
+      "icon": "/img/_style/server.png",
+      "title": "Server & Storage",
+      "description": "In storage and server operations, AstraGrid delivers scalable solutions that protect your data with high availability and operational simplicity."
+    }
+  ],
+  "news": [
+    {
+      "id": 1,
+      "date": "31.08.2017",
+      "type": "Events",
+      "title": "AstraGrid Welcomes New Team Members",
+      "brief": "Our team has grown with new specialists across engineering and operations. This expansion helps us support client projects with more speed and depth.",
+      "link": "#",
+      "image": "/img/home/1.jpg"
+    },
+    {
+      "id": 2,
+      "date": "31.08.2017",
+      "type": "Events",
+      "title": "AstraGrid Opens New Regional Hub",
+      "brief": "After steady growth over the years, we now serve new markets with a regional hub designed to improve local support and faster deployment cycles.",
+      "link": "#",
+      "image": "/img/home/1.jpg"
+    }
+  ],
+  "awards": [
+    {
+      "id": 1,
+      "image": "/img/home/award-1.png"
+    },
+    {
+      "id": 2,
+      "image": "/img/home/award-2.png"
+    },
+    {
+      "id": 3,
+      "image": "/img/home/award-3.png"
+    },
+    {
+      "id": 4,
+      "image": "/img/home/award-2.png"
+    },
+    {
+      "id": 5,
+      "image": "/img/home/award-3.png"
+    }
+  ]
 }

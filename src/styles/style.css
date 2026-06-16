@@ -1,39 +1,33 @@
-@import "./styles/bootstrap.min.css";
-@import "./styles/style.css";
+@import url(../libs/bootstrap/css/bootstrap.min.css);
+@import url(../libs/cusel-min-2.5/sel-style.css);
+@import url(../libs/owl-carousel.2.4/assets/owl.carousel.min.css);
 
-/* Font Faces (Adjust paths if necessary) */
 @font-face {
-  font-family: "LatoRegular";
-  font-style: normal;
-  font-weight: normal;
-  src: url("/fonts/Lato/LatoRegular/LatoRegular.eot?#iefix") format("embedded-opentype"),
-    url("/fonts/Lato/LatoRegular/LatoRegular.woff") format("woff"),
-    url("/fonts/Lato/LatoRegular/LatoRegular.ttf") format("truetype");
+	font-family: "LatoRegular";
+	font-style: normal;
+	font-weight: normal;
+	src: url("../fonts/Lato/LatoRegular/LatoRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato/LatoRegular/LatoRegular.woff") format("woff"), url("../fonts/Lato/LatoRegular/LatoRegular.ttf") format("truetype")
 }
 
 @font-face {
-  font-family: "LatoMedium";
-  font-style: normal;
-  font-weight: normal;
-  src: url("/fonts/Lato/LatoMedium/LatoMedium.eot?#iefix") format("embedded-opentype"),
-    url("/fonts/Lato/LatoMedium/LatoMedium.woff") format("woff"),
-    url("/fonts/Lato/LatoMedium/LatoMedium.ttf") format("truetype");
+	font-family: "LatoMedium";
+	font-style: normal;
+	font-weight: normal;
+	src: url("../fonts/Lato/LatoMedium/LatoMedium.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato/LatoMedium/LatoMedium.woff") format("woff"), url("../fonts/Lato/LatoMedium/LatoMedium.ttf") format("truetype")
 }
 
 @font-face {
-  font-family: "LatoHeavy";
-  font-style: normal;
-  font-weight: normal;
-  src: url("/fonts/Lato/LatoHeavy/LatoHeavy.eot?#iefix") format("embedded-opentype"),
-    url("/fonts/Lato/LatoHeavy/LatoHeavy.woff") format("woff"),
-    url("/fonts/Lato/LatoHeavy/LatoHeavy.ttf") format("truetype");
+	font-family: "LatoHeavy";
+	font-style: normal;
+	font-weight: normal;
+	src: url("../fonts/Lato/LatoHeavy/LatoHeavy.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato/LatoHeavy/LatoHeavy.woff") format("woff"), url("../fonts/Lato/LatoHeavy/LatoHeavy.ttf") format("truetype")
 }
 
 * {
-  -webkit-transition: .3s background-color;
-  -o-transition: .3s background-color;
-  -moz-transition: .3s background-color;
-  transition: .3s background-color;
+	-webkit-transition: .3s background-color;
+	-o-transition: .3s background-color;
+	-moz-transition: .3s background-color;
+	transition: .3s background-color
 }
 
 .title-wrap {

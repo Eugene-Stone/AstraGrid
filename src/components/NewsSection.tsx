@@ -1,0 +1,68 @@
+import React from 'react';
+
+interface NewsItem {
+	id: number;
+	date: string;
+	type: string;
+	title: string;
+	brief: string;
+	link: string;
+	image: string;
+}
+
+interface NewsSectionProps {
+	news: NewsItem[];
+}
+
+const NewsSection: React.FC<NewsSectionProps> = ({ news }) => {
+	const mainNews = news[0]; // Assuming the first item is the main news
+	const otherNews = news.slice(1); // Remaining items for the list
+
+	return (
+		<section className="sect-news">
+			<div className="title-wrap">
+				<h2 className="h2-title">Insights</h2>
+			</div>
+
+			<div className="sect-news-line">
+				{mainNews && (
+					<div className="sect-news-cell">
+						<div className="sect-news-img">
+							<img src={mainNews.image} alt="image" />
+						</div>
+					</div>
+				)}
+
+				<div className="sect-news-cell">
+					<div className="sect-news-lst">
+						<ul>
+							{otherNews.map((item) => (
+								<li className="sect-news-itm" key={item.id}>
+									<div className="news-top-line">
+										<div className="date">{item.date}</div>
+										<div className="type">{item.type}</div>
+									</div>
+									<a href={item.link} className="news-title">
+										{item.title}
+									</a>
+									<div className="news-brief">{item.brief}</div>
+									<div className="news-lnk">
+										<a href={item.link}>Read full article</a>
+									</div>
+								</li>
+							))}
+						</ul>
+
+						<div className="btn-wrap">
+							<a href="#" className="btn">
+								More
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	);
+};
+
+export default NewsSection;

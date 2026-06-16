@@ -1,164 +1,29 @@
-import { useEffect, useState } from 'react';
-import './Header.css';
+import React from 'react';
 
-type ContactItem = {
-	id: string;
-	label: string;
-	href: string;
-	type: 'phone' | 'email' | 'call';
-};
-
-type NavigationItem = {
-	id: string;
-	title: string;
-	href: string;
-	children?: NavigationItem[];
-};
-
-type HeaderData = {
-	contactItems: ContactItem[];
-	logo: string;
-	navigation: NavigationItem[];
-};
-
-const fallbackHeader: HeaderData = {
-	logo: 'AstraGrid',
-	contactItems: [
-		{
-			id: 'phone',
-			label: '+1 (800) 555-0199',
-			href: 'tel:+1-800-555-0199',
-			type: 'phone',
-		},
-		{
-			id: 'email',
-			label: 'contact@astragrid.io',
-			href: 'mailto:contact@astragrid.io',
-			type: 'email',
-		},
-		{
-			id: 'request-call',
-			label: 'Request Call',
-			href: '#',
-			type: 'call',
-		},
-	],
-	navigation: [
-		{
-			id: 'services',
-			title: 'Services',
-			href: '#',
-			children: [
-				{
-					id: 'infra',
-					title: 'Infrastructure',
-					href: '#',
-					children: [
-						{ id: 'infra-hosting', title: 'Cloud hosting', href: '#' },
-						{ id: 'infra-backup', title: 'Backup & recovery', href: '#' },
-						{ id: 'infra-automation', title: 'Automation', href: '#' },
-					],
-				},
-				{
-					id: 'security',
-					title: 'IT Security',
-					href: '#',
-					children: [
-						{ id: 'security-monitoring', title: 'Monitoring', href: '#' },
-						{ id: 'security-response', title: 'Response', href: '#' },
-						{ id: 'security-audit', title: 'Audit', href: '#' },
-					],
-				},
-				{
-					id: 'server-storage',
-					title: 'Server & Storage',
-					href: '#',
-				},
-			],
-		},
-		{
-			id: 'insights',
-			title: 'Insights',
-			href: '#',
-			children: [
-				{ id: 'insights-news', title: 'Industry News', href: '#' },
-				{ id: 'insights-reports', title: 'Reports', href: '#' },
-				{ id: 'insights-learning', title: 'Learning', href: '#' },
-			],
-		},
-		{
-			id: 'company',
-			title: 'Company',
-			href: '#',
-			children: [
-				{ id: 'company-about', title: 'About us', href: '#' },
-				{ id: 'company-team', title: 'Team', href: '#' },
-				{ id: 'company-careers', title: 'Careers', href: '#' },
-			],
-		},
-		{ id: 'careers', title: 'Careers', href: '#' },
-		{ id: 'contact', title: 'Contact', href: '#' },
-	],
-};
-
-function Header() {
-	const [headerData, setHeaderData] = useState<HeaderData>(fallbackHeader);
-	const [loading, setLoading] = useState(true);
-	const [error, setError] = useState<string | null>(null);
-
-	useEffect(() => {
-		window
-			.fetch('http://localhost:4000/header')
-			.then((response) => {
-				if (!response.ok) {
-					throw new Error('Failed to load header data');
-				}
-				return response.json() as Promise<HeaderData>;
-			})
-			.then((data) => {
-				setHeaderData(data);
-			})
-			.catch((err) => {
-				console.error(err);
-				setError('Header data unavailable, using local fallback.');
-			})
-			.finally(() => {
-				setLoading(false);
-			});
-	}, []);
-
-	const renderMenuItems = (items: NavigationItem[]) => {
-		return items.map((item) => {
-			const hasChildren = item.children?.length > 0;
-
-			return (
-				<li key={item.id} className={hasChildren ? 'has-mnu' : undefined}>
-					<a href={item.href}>
-						<span>{item.title}</span>
-						{hasChildren ? <span className="menu-arrow">▾</span> : null}
-					</a>
-
-					{hasChildren ? (
-						<ul className="sub-menu">{renderMenuItems(item.children || [])}</ul>
-					) : null}
-				</li>
-			);
-		});
-	};
-
+const Header: React.FC = () => {
 	return (
 		<header className="main-head">
 			<div className="head-top">
 				<div className="container">
 					<div className="head-info-box">
-						{headerData.contactItems.map((item) => (
-							<a
-								key={item.id}
-								className={`head-info-cell ${item.type === 'call' ? 'callback-btn' : ''}`}
-								href={item.href}>
-								<span className="head-info-itm">{item.label}</span>
-							</a>
-						))}
+						<a
+							className="head-info-cell"
+							style={{ backgroundImage: 'url(/img/_style/phone.png)' }}
+							href="tel:+1-800-555-0199">
+							<span className="head-info-itm">+1 (800) 555-0199</span>
+						</a>
+						<a
+							className="head-info-cell"
+							style={{ backgroundImage: 'url(/img/_style/letter.png)' }}
+							href="mailto:contact@astragrid.io">
+							<span className="head-info-itm">contact@astragrid.io</span>
+						</a>
+						<a
+							className="head-info-cell callback-btn"
+							style={{ backgroundImage: 'url(/img/_style/callback.png)' }}
+							href="#">
+							<span className="head-info-itm">Request Call</span>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -167,27 +32,139 @@ function Header() {
 				<div className="container">
 					<div className="head-line">
 						<div className="head-cell">
-							<a className="logo" href="/">
-								{headerData.logo}
-							</a>
+							<div className="logo-wrap">
+								<a href="/" className="logo">
+									<img src="/img/logo.png" alt="logo" />
+								</a>
+							</div>
 						</div>
 						<div className="head-cell">
+							<div className="toggle-btn hidden">
+								<span></span>
+							</div>
+
 							<div className="mnu-wrap">
-								<nav aria-label="Main navigation">
-									{renderMenuItems(headerData.navigation)}
-								</nav>
+								<ul className="main-mnu">
+									<li className="has-mnu">
+										<a href="#">
+											<span>Services</span>
+										</a>
+										<ul className="sub-menu">
+											<li className="has-mnu">
+												<a href="#" className="title-sub">
+													<span>sub-item-1</span>
+													<i className="arr_r-ic"></i>
+												</a>
+												<ul className="sub-menu">
+													<li>
+														<a href="#" className="title-sub">
+															<span>sub-item-2</span>
+														</a>
+													</li>
+													<li>
+														<a href="#" className="title-sub">
+															<span>sub-item-2</span>
+														</a>
+													</li>
+													<li>
+														<a href="#" className="title-sub">
+															<span>sub-item-2</span>
+														</a>
+													</li>
+												</ul>
+											</li>
+											<li className="has-mnu">
+												<a href="#" className="title-sub">
+													<span>sub-item-1</span>
+													<i className="arr_r-ic"></i>
+												</a>
+												<ul className="sub-menu">
+													<li>
+														<a href="#" className="title-sub">
+															<span>sub-item-2</span>
+														</a>
+													</li>
+													<li>
+														<a href="#" className="title-sub">
+															<span>sub-item-2</span>
+														</a>
+													</li>
+													<li>
+														<a href="#" className="title-sub">
+															<span>sub-item-2</span>
+														</a>
+													</li>
+												</ul>
+											</li>
+											<li>
+												<a href="#" className="title-sub">
+													<span>sub-item-1</span>
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li className="has-mnu">
+										<a href="#">
+											<span>Insights</span>
+										</a>
+										<ul className="sub-menu">
+											<li>
+												<a href="#" className="title-sub">
+													<span>sub-item-1</span>
+												</a>
+											</li>
+											<li>
+												<a href="#" className="title-sub">
+													<span>sub-item-1</span>
+												</a>
+											</li>
+											<li>
+												<a href="#" className="title-sub">
+													<span>sub-item-1</span>
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li className="has-mnu">
+										<a href="#">
+											<span>Company</span>
+										</a>
+										<ul className="sub-menu">
+											<li>
+												<a href="#" className="title-sub">
+													<span>sub-item-1</span>
+												</a>
+											</li>
+											<li>
+												<a href="#" className="title-sub">
+													<span>sub-item-1</span>
+												</a>
+											</li>
+											<li>
+												<a href="#" className="title-sub">
+													<span>sub-item-1</span>
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li className="">
+										<a href="#">
+											<span>Careers</span>
+										</a>
+									</li>
+									<li className="">
+										<a href="#">
+											<span>Contact</span>
+										</a>
+									</li>
+								</ul>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-
-			<div className="header-status-row">
-				{loading && <div className="header-status">Loading header…</div>}
-				{!loading && error && <div className="header-status error">{error}</div>}
-			</div>
 		</header>
 	);
-}
+};
 
 export default Header;
