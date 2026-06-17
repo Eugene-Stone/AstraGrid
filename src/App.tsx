@@ -36,6 +36,17 @@ interface AwardItem {
 	image: string;
 }
 
+import React, { useState, useEffect } from 'react';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import HeroSection from './components/HeroSection';
+import ServicesSection from './components/ServicesSection';
+import NewsSection from './components/NewsSection';
+import AwardsSection from './components/AwardsSection';
+import ContactSection from './components/ContactSection';
+
+import { Slide, ServiceItem, NewsItem, AwardItem } from './types';
+
 function App() {
 	const [slides, setSlides] = useState<Slide[]>([]);
 	const [services, setServices] = useState<ServiceItem[]>([]);

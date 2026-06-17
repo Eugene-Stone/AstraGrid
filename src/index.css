@@ -1,5 +1,8 @@
 @import "./styles/bootstrap.min.css";
 @import "./styles/style.css";
+/* Owl Carousel styles */
+@import "owl.carousel/dist/assets/owl.carousel.min.css";
+@import "owl.carousel/dist/assets/owl.theme.default.min.css";
 
 /* Font Faces (Adjust paths if necessary) */
 @font-face {
