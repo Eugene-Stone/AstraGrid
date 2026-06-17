@@ -1,6 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Header: React.FC = () => {
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+	const toggleMenu = () => {
+		setIsMenuOpen(!isMenuOpen);
+	};
+
 	return (
 		<header className="main-head">
 			<div className="head-top">
@@ -39,11 +45,15 @@ const Header: React.FC = () => {
 							</div>
 						</div>
 						<div className="head-cell">
-							<div className="toggle-btn hidden">
+							<div
+								className={isMenuOpen ? 'toggle-btn on' : 'toggle-btn'}
+								onClick={toggleMenu}>
 								<span></span>
 							</div>
 
-							<div className="mnu-wrap">
+							<div
+								className="mnu-wrap"
+								style={{ display: isMenuOpen ? 'block' : 'none' }}>
 								<ul className="main-mnu">
 									<li className="has-mnu">
 										<a href="#">
