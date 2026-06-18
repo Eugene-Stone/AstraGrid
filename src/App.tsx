@@ -7,45 +7,7 @@ import NewsSection from './components/NewsSection';
 import AwardsSection from './components/AwardsSection';
 import ContactSection from './components/ContactSection';
 
-interface Slide {
-	id: number;
-	title: string;
-	description: string;
-	image: string;
-}
-
-interface ServiceItem {
-	id: number;
-	icon: string;
-	title: string;
-	description: string;
-}
-
-interface NewsItem {
-	id: number;
-	date: string;
-	type: string;
-	title: string;
-	brief: string;
-	link: string;
-	image: string;
-}
-
-interface AwardItem {
-	id: number;
-	image: string;
-}
-
-import React, { useState, useEffect } from 'react';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import HeroSection from './components/HeroSection';
-import ServicesSection from './components/ServicesSection';
-import NewsSection from './components/NewsSection';
-import AwardsSection from './components/AwardsSection';
-import ContactSection from './components/ContactSection';
-
-import { Slide, ServiceItem, NewsItem, AwardItem } from './types';
+import type { Slide, ServiceItem, NewsItem, AwardItem } from './types';
 
 function App() {
 	const [slides, setSlides] = useState<Slide[]>([]);
@@ -54,7 +16,6 @@ function App() {
 	const [awards, setAwards] = useState<AwardItem[]>([]);
 
 	useEffect(() => {
-		// Fetch data from db.json using json-server
 		const fetchData = async () => {
 			try {
 				const slidesResponse = await fetch('http://localhost:3000/slides');
