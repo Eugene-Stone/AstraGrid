@@ -1,18 +1,11 @@
-import React from 'react';
 import useOwlCarousel from '../hooks/useOwlCarousel';
-
-interface Slide {
-	id: number;
-	title: string;
-	description: string;
-	image: string;
-}
+import type { Slide } from '../types';
 
 interface HeroSectionProps {
 	slides: Slide[];
 }
 
-const HeroSection: React.FC<HeroSectionProps> = ({ slides }) => {
+const HeroSection = ({ slides }: HeroSectionProps) => {
 	useOwlCarousel('.home-slider', {
 		items: 1,
 		loop: true,

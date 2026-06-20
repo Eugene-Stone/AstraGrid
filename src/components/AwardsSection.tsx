@@ -1,16 +1,11 @@
-import React from 'react';
 import useOwlCarousel from '../hooks/useOwlCarousel';
-
-interface AwardItem {
-	id: number;
-	image: string;
-}
+import type { AwardItem } from '../types';
 
 interface AwardsSectionProps {
 	awards: AwardItem[];
 }
 
-const AwardsSection: React.FC<AwardsSectionProps> = ({ awards }) => {
+const AwardsSection = ({ awards }: AwardsSectionProps) => {
 	useOwlCarousel('.awards-slider', {
 		items: 3,
 		loop: true,

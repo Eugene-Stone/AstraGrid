@@ -1,18 +1,11 @@
-import React from 'react';
 import useOwlCarousel from '../hooks/useOwlCarousel';
-
-interface ServiceItem {
-	id: number;
-	icon: string;
-	title: string;
-	description: string;
-}
+import type { ServiceItem } from '../types';
 
 interface ServicesSectionProps {
 	services: ServiceItem[];
 }
 
-const ServicesSection: React.FC<ServicesSectionProps> = ({ services }) => {
+const ServicesSection = ({ services }: ServicesSectionProps) => {
 	useOwlCarousel('.serv-slider', {
 		items: 3,
 		loop: true,

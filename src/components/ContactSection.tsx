@@ -1,6 +1,4 @@
-import React from 'react';
-
-const ContactSection: React.FC = () => {
+const ContactSection = () => {
 	return (
 		<section className="sect-contact" style={{ backgroundImage: 'url(/img/home/cont-bg.jpg)' }}>
 			<div className="container">
@@ -27,7 +25,9 @@ const ContactSection: React.FC = () => {
 						</div>
 
 						<div className="btn-wrap">
-							<button className="btn">Send Message</button>
+							<button className="btn" type="submit">
+								Send Message
+							</button>
 						</div>
 					</form>
 				</div>

@@ -26,3 +26,9 @@ export interface AwardItem {
 	id: number;
 	image: string;
 }
+
+export interface ContactInfo {
+	phone: string;
+	email: string;
+	callbackLabel: string;
+}

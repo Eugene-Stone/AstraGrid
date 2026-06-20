@@ -1,22 +1,12 @@
-import React from 'react';
-
-interface NewsItem {
-	id: number;
-	date: string;
-	type: string;
-	title: string;
-	brief: string;
-	link: string;
-	image: string;
-}
+import type { NewsItem } from '../types';
 
 interface NewsSectionProps {
 	news: NewsItem[];
 }
 
-const NewsSection: React.FC<NewsSectionProps> = ({ news }) => {
-	const mainNews = news[0]; // Assuming the first item is the main news
-	const otherNews = news.slice(1); // Remaining items for the list
+const NewsSection = ({ news }: NewsSectionProps) => {
+	const mainNews = news[0];
+	const otherNews = news.slice(1);
 
 	return (
 		<section className="sect-news">

@@ -1,6 +1,10 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
-const Header: React.FC = () => {
+interface HeaderProps {
+	isScrolled: boolean;
+}
+
+const Header = ({ isScrolled }: HeaderProps) => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 	const toggleMenu = () => {
@@ -8,7 +12,7 @@ const Header: React.FC = () => {
 	};
 
 	return (
-		<header className="main-head">
+		<header className={isScrolled ? 'main-head fixed' : 'main-head'}>
 			<div className="head-top">
 				<div className="container">
 					<div className="head-info-box">
