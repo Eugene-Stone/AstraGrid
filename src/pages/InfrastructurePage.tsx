@@ -1,5 +1,6 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { assetUrl } from '../utils/assets';
 
 interface PageProps {
 	isScrolled: boolean;
@@ -10,7 +11,9 @@ const InfrastructurePage = ({ isScrolled }: PageProps) => (
 		<Header isScrolled={isScrolled} />
 		<div className="layout">
 			<div className="page-wrap">
-				<div className="top-img-wrap" style={{ backgroundImage: 'url(/img/inner_pages/1.jpg)' }}>
+				<div
+					className="top-img-wrap"
+					style={{ backgroundImage: `url(${assetUrl('/img/inner_pages/1.jpg')})` }}>
 					<div className="container">
 						<div className="top-title">IT Infrastructure</div>
 					</div>

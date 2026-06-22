@@ -1,6 +1,7 @@
 import type { AwardItem, NewsItem, ServiceItem, Slide } from './types';
 
-const API_URL = 'http://localhost:4000';
+// const API_URL = 'http://localhost:4000';
+const API_URL = 'https://astragrid.eugenestone-work.workers.dev';
 
 async function fetchJson<T>(path: string): Promise<T> {
 	const response = await fetch(`${API_URL}${path}`);

@@ -1,3 +1,5 @@
+import { assetUrl } from '../utils/assets';
+
 const Footer = () => {
 	return (
 		<footer className="main-foot">
@@ -21,7 +23,7 @@ const Footer = () => {
 							<a
 								href="#"
 								className="soc-btn"
-								style={{ backgroundImage: 'url(/img/_style/fb-icon.png)' }}></a>
+								style={{ backgroundImage: `url(${assetUrl('/img/_style/fb-icon.png')})` }}></a>
 						</div>
 					</div>
 				</div>

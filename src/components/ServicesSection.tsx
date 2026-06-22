@@ -1,5 +1,6 @@
 import Carousel from './Carousel';
 import type { ServiceItem } from '../types';
+import { assetUrl } from '../utils/assets';
 
 interface ServicesSectionProps {
 	services: ServiceItem[];
@@ -22,7 +23,7 @@ const ServicesSection = ({ services }: ServicesSectionProps) => (
 						<div className="serv-itm">
 							<div
 								className="serv-ic"
-								style={{ backgroundImage: `url(${service.icon})` }}></div>
+								style={{ backgroundImage: `url(${assetUrl(service.icon)})` }}></div>
 							<div className="serv-title">{service.title}</div>
 							<div className="serv-descr">{service.description}</div>
 							<div className="btn-wrap">

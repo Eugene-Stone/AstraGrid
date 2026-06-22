@@ -1,4 +1,5 @@
 import type { NewsItem } from '../types';
+import { assetUrl } from '../utils/assets';
 
 interface NewsSectionProps {
 	news: NewsItem[];
@@ -18,7 +19,7 @@ const NewsSection = ({ news }: NewsSectionProps) => {
 				{mainNews && (
 					<div className="sect-news-cell">
 						<div className="sect-news-img">
-							<img src={mainNews.image} alt="image" />
+							<img src={assetUrl(mainNews.image)} alt="image" />
 						</div>
 					</div>
 				)}

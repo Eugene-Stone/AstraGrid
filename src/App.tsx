@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Routes, Route, useNavigate } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import InfrastructurePage from './pages/InfrastructurePage';
 import DefensePage from './pages/DefensePage';
@@ -12,7 +12,6 @@ function App() {
 	const [news, setNews] = useState<NewsItem[]>([]);
 	const [awards, setAwards] = useState<AwardItem[]>([]);
 	const [isScrolled, setIsScrolled] = useState(false);
-	const navigate = useNavigate();
 
 	useEffect(() => {
 		const fetchData = async () => {

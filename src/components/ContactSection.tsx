@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from 'react';
+import { assetUrl } from '../utils/assets';
 
 const ContactSection = () => {
 	const [status, setStatus] = useState<'idle' | 'sent'>('idle');
@@ -10,7 +11,9 @@ const ContactSection = () => {
 	};
 
 	return (
-		<section className="sect-contact" style={{ backgroundImage: 'url(/img/home/cont-bg.jpg)' }}>
+		<section
+			className="sect-contact"
+			style={{ backgroundImage: `url(${assetUrl('/img/home/cont-bg.jpg')})` }}>
 			<div className="container">
 				<div className="title-wrap">
 					<h2 className="h2-title">Contact</h2>

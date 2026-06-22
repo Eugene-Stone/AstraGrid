@@ -1,24 +1,22 @@
-@import url("./bootstrap.min.css");
-
 @font-face {
 	font-family: "LatoRegular";
 	font-style: normal;
 	font-weight: normal;
-	src: url("../fonts/Lato/LatoRegular/LatoRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato/LatoRegular/LatoRegular.woff") format("woff"), url("../fonts/Lato/LatoRegular/LatoRegular.ttf") format("truetype")
+	src: url("/AstraGrid/fonts/Lato/LatoRegular/LatoRegular.eot?#iefix") format("embedded-opentype"), url("/AstraGrid/fonts/Lato/LatoRegular/LatoRegular.woff") format("woff"), url("/AstraGrid/fonts/Lato/LatoRegular/LatoRegular.ttf") format("truetype")
 }
 
 @font-face {
 	font-family: "LatoMedium";
 	font-style: normal;
 	font-weight: normal;
-	src: url("../fonts/Lato/LatoMedium/LatoMedium.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato/LatoMedium/LatoMedium.woff") format("woff"), url("../fonts/Lato/LatoMedium/LatoMedium.ttf") format("truetype")
+	src: url("/AstraGrid/fonts/Lato/LatoMedium/LatoMedium.eot?#iefix") format("embedded-opentype"), url("/AstraGrid/fonts/Lato/LatoMedium/LatoMedium.woff") format("woff"), url("/AstraGrid/fonts/Lato/LatoMedium/LatoMedium.ttf") format("truetype")
 }
 
 @font-face {
 	font-family: "LatoHeavy";
 	font-style: normal;
 	font-weight: normal;
-	src: url("../fonts/Lato/LatoHeavy/LatoHeavy.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato/LatoHeavy/LatoHeavy.woff") format("woff"), url("../fonts/Lato/LatoHeavy/LatoHeavy.ttf") format("truetype")
+	src: url("/AstraGrid/fonts/Lato/LatoHeavy/LatoHeavy.eot?#iefix") format("embedded-opentype"), url("/AstraGrid/fonts/Lato/LatoHeavy/LatoHeavy.woff") format("woff"), url("/AstraGrid/fonts/Lato/LatoHeavy/LatoHeavy.ttf") format("truetype")
 }
 
 * {
@@ -231,7 +229,7 @@ h6 {
 	width: 10px;
 	height: 1px;
 	opacity: 0;
-	background-image: url("../img/_style/_svg/arr_dn_hover.svg"), url("../img/_style/_svg/arr_l-white.svg"), url("../img/_style/_svg/arr_r-white.svg")
+	background-image: url("/AstraGrid/img/_style/_svg/arr_dn_hover.svg"), url("/AstraGrid/img/_style/_svg/arr_l-white.svg"), url("/AstraGrid/img/_style/_svg/arr_r-white.svg")
 }
 
 [class$="-ic"] {
@@ -248,7 +246,7 @@ h6 {
 .arr_dn-ic {
 	width: 14px;
 	height: 7px;
-	background-image: url("../img/_style/_svg/arr_dn.svg");
+	background-image: url("/AstraGrid/img/_style/_svg/arr_dn.svg");
 	-webkit-transition: .3s rotate;
 	-o-transition: .3s rotate;
 	-moz-transition: .3s rotate;
@@ -259,21 +257,21 @@ h6 {
 	font-family: "LatoRegular";
 	font-style: normal;
 	font-weight: normal;
-	src: url("../fonts/Lato/LatoRegular/LatoRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato/LatoRegular/LatoRegular.woff") format("woff"), url("../fonts/Lato/LatoRegular/LatoRegular.ttf") format("truetype")
+	src: url("/AstraGrid/fonts/Lato/LatoRegular/LatoRegular.eot?#iefix") format("embedded-opentype"), url("/AstraGrid/fonts/Lato/LatoRegular/LatoRegular.woff") format("woff"), url("/AstraGrid/fonts/Lato/LatoRegular/LatoRegular.ttf") format("truetype")
 }
 
 @font-face {
 	font-family: "LatoMedium";
 	font-style: normal;
 	font-weight: normal;
-	src: url("../fonts/Lato/LatoMedium/LatoMedium.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato/LatoMedium/LatoMedium.woff") format("woff"), url("../fonts/Lato/LatoMedium/LatoMedium.ttf") format("truetype")
+	src: url("/AstraGrid/fonts/Lato/LatoMedium/LatoMedium.eot?#iefix") format("embedded-opentype"), url("/AstraGrid/fonts/Lato/LatoMedium/LatoMedium.woff") format("woff"), url("/AstraGrid/fonts/Lato/LatoMedium/LatoMedium.ttf") format("truetype")
 }
 
 @font-face {
 	font-family: "LatoHeavy";
 	font-style: normal;
 	font-weight: normal;
-	src: url("../fonts/Lato/LatoHeavy/LatoHeavy.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato/LatoHeavy/LatoHeavy.woff") format("woff"), url("../fonts/Lato/LatoHeavy/LatoHeavy.ttf") format("truetype")
+	src: url("/AstraGrid/fonts/Lato/LatoHeavy/LatoHeavy.eot?#iefix") format("embedded-opentype"), url("/AstraGrid/fonts/Lato/LatoHeavy/LatoHeavy.woff") format("woff"), url("/AstraGrid/fonts/Lato/LatoHeavy/LatoHeavy.ttf") format("truetype")
 }
 
 * {
@@ -536,7 +534,7 @@ button.btn {
 	-o-transition: .3s;
 	-moz-transition: .3s;
 	transition: .3s;
-	background-image: url("../img/_style/_svg/btn-top.svg");
+	background-image: url("/AstraGrid/img/_style/_svg/btn-top.svg");
 	background-position: center;
 	background-repeat: no-repeat;
 	-moz-background-size: 25px;
@@ -561,7 +559,7 @@ button.btn {
 	content: "";
 	position: absolute;
 	inset: 0;
-	background-image: url("../img/_style/_svg/btn-top.svg");
+	background-image: url("/AstraGrid/img/_style/_svg/btn-top.svg");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: 25px
@@ -1090,7 +1088,7 @@ body {
 
 .main-mnu>li:hover>a .arr_dn-ic,
 .main-mnu>li:hover>span .arr_dn-ic {
-	background-image: url("../img/_style/_svg/arr_dn_hover.svg");
+	background-image: url("/AstraGrid/img/_style/_svg/arr_dn_hover.svg");
 	-webkit-transform: rotate(180deg);
 	-moz-transform: rotate(180deg);
 	-ms-transform: rotate(180deg);
@@ -1514,21 +1512,21 @@ body {
 .owl-prev {
 	left: 0;
 	background-position: left 46% center;
-	background-image: url("../img/_style/_svg/arr_l.svg")
+	background-image: url("/AstraGrid/img/_style/_svg/arr_l.svg")
 }
 
 .owl-prev:hover {
-	background-image: url("../img/_style/_svg/arr_l-white.svg")
+	background-image: url("/AstraGrid/img/_style/_svg/arr_l-white.svg")
 }
 
 .owl-next {
 	right: 0;
 	background-position: left 54% center;
-	background-image: url("../img/_style/_svg/arr_r.svg")
+	background-image: url("/AstraGrid/img/_style/_svg/arr_r.svg")
 }
 
 .owl-next:hover {
-	background-image: url("../img/_style/_svg/arr_r-white.svg")
+	background-image: url("/AstraGrid/img/_style/_svg/arr_r-white.svg")
 }
 
 .dots-nav {

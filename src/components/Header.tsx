@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { assetUrl } from '../utils/assets';
 
 interface HeaderProps {
 	isScrolled: boolean;
@@ -43,19 +44,19 @@ const Header = ({ isScrolled }: HeaderProps) => {
 					<div className="head-info-box">
 						<a
 							className="head-info-cell"
-							style={{ backgroundImage: 'url(/img/_style/phone.png)' }}
+							style={{ backgroundImage: `url(${assetUrl('/img/_style/phone.png')})` }}
 							href="tel:+1-800-555-0199">
 							<span className="head-info-itm">+1 (800) 555-0199</span>
 						</a>
 						<a
 							className="head-info-cell"
-							style={{ backgroundImage: 'url(/img/_style/letter.png)' }}
+							style={{ backgroundImage: `url(${assetUrl('/img/_style/letter.png')})` }}
 							href="mailto:contact@astragrid.io">
 							<span className="head-info-itm">contact@astragrid.io</span>
 						</a>
 						<a
 							className="head-info-cell callback-btn"
-							style={{ backgroundImage: 'url(/img/_style/callback.png)' }}
+							style={{ backgroundImage: `url(${assetUrl('/img/_style/callback.png')})` }}
 							href="#">
 							<span className="head-info-itm">Request Call</span>
 						</a>
@@ -69,7 +70,7 @@ const Header = ({ isScrolled }: HeaderProps) => {
 						<div className="head-cell">
 							<div className="logo-wrap">
 								<Link to="/" className="logo">
-									<img src="/img/logo.png" alt="logo" />
+									<img src={assetUrl('/img/logo.png')} alt="logo" />
 								</Link>
 							</div>
 						</div>

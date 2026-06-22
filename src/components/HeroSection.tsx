@@ -1,5 +1,6 @@
 import Carousel from './Carousel';
 import type { Slide } from '../types';
+import { assetUrl } from '../utils/assets';
 
 interface HeroSectionProps {
 	slides: Slide[];
@@ -13,7 +14,7 @@ const HeroSection = ({ slides }: HeroSectionProps) => (
 			slidesToShow={1}
 			autoplayDelay={5000}
 			renderItem={(slide) => (
-				<div className="slide" style={{ backgroundImage: `url(${slide.image})` }}>
+				<div className="slide" style={{ backgroundImage: `url(${assetUrl(slide.image)})` }}>
 					<div className="slide-inner">
 						<div className="container">
 							<div className="home-slide-txt">

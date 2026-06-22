@@ -1,5 +1,6 @@
 import Carousel from './Carousel';
 import type { AwardItem } from '../types';
+import { assetUrl } from '../utils/assets';
 
 interface AwardsSectionProps {
 	awards: AwardItem[];
@@ -20,7 +21,7 @@ const AwardsSection = ({ awards }: AwardsSectionProps) => (
 					slidesToShow={3}
 					renderItem={(award) => (
 						<div className="awards-itm">
-							<img src={award.image} alt="image" />
+							<img src={assetUrl(award.image)} alt="image" />
 						</div>
 					)}
 				/>
