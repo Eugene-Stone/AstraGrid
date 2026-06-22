@@ -1,4 +1,14 @@
+import { useState, type FormEvent } from 'react';
+
 const ContactSection = () => {
+	const [status, setStatus] = useState<'idle' | 'sent'>('idle');
+
+	const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+		event.preventDefault();
+		event.currentTarget.reset();
+		setStatus('sent');
+	};
+
 	return (
 		<section className="sect-contact" style={{ backgroundImage: 'url(/img/home/cont-bg.jpg)' }}>
 			<div className="container">
@@ -10,7 +20,7 @@ const ContactSection = () => {
 				</div>
 
 				<div className="cont-form-wrap">
-					<form action="#" className="cont-form">
+					<form action="#" className="cont-form" onSubmit={handleSubmit}>
 						<div className="cust-inp">
 							<input type="text" placeholder="Your Name (required)" required />
 						</div>
@@ -29,6 +39,9 @@ const ContactSection = () => {
 								Send Message
 							</button>
 						</div>
+						{status === 'sent' && (
+							<div className="form-status">Thank you. Your message has been prepared for review.</div>
+						)}
 					</form>
 				</div>
 			</div>

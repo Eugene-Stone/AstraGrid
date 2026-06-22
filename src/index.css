@@ -1,10 +1,7 @@
 @import "./styles/bootstrap.min.css";
 @import "./styles/style.css";
-/* Owl Carousel styles */
-@import "owl.carousel/dist/assets/owl.carousel.min.css";
-@import "owl.carousel/dist/assets/owl.theme.default.min.css";
 
-/* Font Faces (Adjust paths if necessary) */
+/* Font Faces */
 @font-face {
   font-family: "LatoRegular";
   font-style: normal;
@@ -659,62 +656,6 @@ button.btn {
 	-ms-transform: rotate(-45deg) translate(7px, -1px);
 	-o-transform: rotate(-45deg) translate(7px, -1px);
 	transform: rotate(-45deg) translate(7px, -1px)
-}
-
-.inner-pages {
-	position: fixed;
-	z-index: 5000;
-	top: 20%;
-	left: 0;
-	display: inline-block;
-	height: 120px;
-	width: 32px;
-	overflow: hidden
-}
-
-.inner-pages>span {
-	display: inline-block;
-	width: 120px;
-	height: 32px;
-	padding: 5px 10px;
-	line-height: 1.3em;
-	color: #edf2ff;
-	background-color: #111827;
-	cursor: pointer;
-	-webkit-transform: rotate(-90deg) translate(-44px, -44px);
-	-moz-transform: rotate(-90deg) translate(-44px, -44px);
-	-ms-transform: rotate(-90deg) translate(-44px, -44px);
-	-o-transform: rotate(-90deg) translate(-44px, -44px);
-	transform: rotate(-90deg) translate(-44px, -44px)
-}
-
-.inner-pages:hover {
-	overflow: visible
-}
-
-.inner-pages:hover .page-links {
-	opacity: 1
-}
-
-.page-links {
-	padding: 10px;
-	background-color: #07080f;
-	position: absolute;
-	top: 0;
-	left: 100%;
-	-webkit-transition: .3s;
-	-o-transition: .3s;
-	-moz-transition: .3s;
-	transition: .3s;
-	opacity: 0;
-	min-height: 100%;
-	white-space: nowrap
-}
-
-.page-links a {
-	display: block;
-	padding: 5px;
-	margin: 0 0 10px
 }
 
 body {

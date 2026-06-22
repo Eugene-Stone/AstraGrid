@@ -24,19 +24,22 @@
       "id": 1,
       "icon": "/img/_style/structur.png",
       "title": "Infrastructure",
-      "description": "Our infrastructure team builds the backbone for digital operations. Every deployment is planned to keep systems stable, fast, and always reachable."
+      "description": "Our infrastructure team builds the backbone for digital operations. Every deployment is planned to keep systems stable, fast, and always reachable.",
+      "href": "/infrastructure"
     },
     {
       "id": 2,
       "icon": "/img/_style/security.png",
       "title": "IT Security",
-      "description": "IT security is a top priority, but many teams still treat it as a secondary concern. We help make protection practical and reliable."
+      "description": "IT security is a top priority, but many teams still treat it as a secondary concern. We help make protection practical and reliable.",
+      "href": "/defense"
     },
     {
       "id": 3,
       "icon": "/img/_style/server.png",
       "title": "Server & Storage",
-      "description": "In storage and server operations, AstraGrid delivers scalable solutions that protect your data with high availability and operational simplicity."
+      "description": "In storage and server operations, AstraGrid delivers scalable solutions that protect your data with high availability and operational simplicity.",
+      "href": "/infrastructure"
     }
   ],
   "news": [

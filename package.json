@@ -11,15 +11,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "owl.carousel": "^2.3.4",
     "react": "^19.2.6",
-    "react-dom": "^19.2.6"
+    "react-dom": "^19.2.6",
+    "react-router-dom": "^7.18.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "@types/jquery": "^4.0.1",
     "@types/node": "^24.12.3",
-    "@types/owl.carousel": "^2.3.6",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.1",

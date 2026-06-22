@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 interface HeaderProps {
 	isScrolled: boolean;
@@ -6,9 +7,33 @@ interface HeaderProps {
 
 const Header = ({ isScrolled }: HeaderProps) => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
+	const [isDesktop, setIsDesktop] = useState(() => window.innerWidth >= 992);
+
+	useEffect(() => {
+		const handleResize = () => {
+			const desktop = window.innerWidth >= 992;
+			setIsDesktop(desktop);
+			setIsMenuOpen(desktop);
+		};
+
+		handleResize();
+		window.addEventListener('resize', handleResize);
+
+		return () => {
+			window.removeEventListener('resize', handleResize);
+			document.body.classList.remove('mnu-open');
+		};
+	}, []);
+
+	useEffect(() => {
+		document.body.classList.toggle('mnu-open', isMenuOpen && !isDesktop);
+	}, [isDesktop, isMenuOpen]);
 
 	const toggleMenu = () => {
-		setIsMenuOpen(!isMenuOpen);
+		if (isDesktop) return;
+		setIsMenuOpen((current) => {
+			return !current;
+		});
 	};
 
 	return (
@@ -43,157 +68,173 @@ const Header = ({ isScrolled }: HeaderProps) => {
 					<div className="head-line">
 						<div className="head-cell">
 							<div className="logo-wrap">
-								<a href="/" className="logo">
+								<Link to="/" className="logo">
 									<img src="/img/logo.png" alt="logo" />
-								</a>
+								</Link>
 							</div>
 						</div>
 						<div className="head-cell">
-							<div
-								className={isMenuOpen ? 'toggle-btn on' : 'toggle-btn'}
-								onClick={toggleMenu}>
-								<span></span>
-							</div>
+							{!isDesktop && (
+								<div
+									className={isMenuOpen ? 'toggle-btn on' : 'toggle-btn'}
+									onClick={toggleMenu}>
+									<span></span>
+								</div>
+							)}
 
-							<div
-								className="mnu-wrap"
-								style={{ display: isMenuOpen ? 'block' : 'none' }}>
+							<div className={isMenuOpen ? 'mnu-wrap open' : 'mnu-wrap'}>
 								<ul className="main-mnu">
 									<li className="has-mnu">
-										<a href="/services">
+										<Link to="/">
 											<span>Services</span>
-										</a>
+										</Link>
 										<ul className="sub-menu">
 											<li className="has-mnu">
-												<a
-													href="/services/sub-item-1"
+												<Link
+													to="/services/sub-item-1"
 													className="title-sub">
 													<span>sub-item-1</span>
 													<i className="arr_r-ic"></i>
-												</a>
+												</Link>
 												<ul className="sub-menu">
 													<li>
-														<a
-															href="/services/sub-item-2"
+														<Link
+															to="/services/sub-item-2"
 															className="title-sub">
 															<span>sub-item-2</span>
-														</a>
+														</Link>
 													</li>
 													<li>
-														<a
-															href="/services/sub-item-2"
+														<Link
+															to="/services/sub-item-2"
 															className="title-sub">
 															<span>sub-item-2</span>
-														</a>
+														</Link>
 													</li>
 													<li>
-														<a
-															href="/services/sub-item-2"
+														<Link
+															to="/services/sub-item-2"
 															className="title-sub">
 															<span>sub-item-2</span>
-														</a>
+														</Link>
 													</li>
 												</ul>
 											</li>
 											<li className="has-mnu">
-												<a
-													href="/services/sub-item-1"
+												<Link
+													to="/services/sub-item-1"
 													className="title-sub">
 													<span>sub-item-1</span>
 													<i className="arr_r-ic"></i>
-												</a>
+												</Link>
 												<ul className="sub-menu">
 													<li>
-														<a
-															href="/services/sub-item-2"
+														<Link
+															to="/services/sub-item-2"
 															className="title-sub">
 															<span>sub-item-2</span>
-														</a>
+														</Link>
 													</li>
 													<li>
-														<a
-															href="/services/sub-item-2"
+														<Link
+															to="/services/sub-item-2"
 															className="title-sub">
 															<span>sub-item-2</span>
-														</a>
+														</Link>
 													</li>
 													<li>
-														<a
-															href="/services/sub-item-2"
+														<Link
+															to="/services/sub-item-2"
 															className="title-sub">
 															<span>sub-item-2</span>
-														</a>
+														</Link>
 													</li>
 												</ul>
 											</li>
 											<li>
-												<a
-													href="/services/sub-item-1"
+												<Link
+													to="/services/sub-item-1"
 													className="title-sub">
 													<span>sub-item-1</span>
-												</a>
+												</Link>
 											</li>
 										</ul>
 									</li>
+									<li className="">
+										<Link to="/infrastructure">
+											<span>Infrastructure</span>
+										</Link>
+									</li>
+									<li className="">
+										<Link to="/defense">
+											<span>Email Defense</span>
+										</Link>
+									</li>
 									<li className="has-mnu">
-										<a href="/insights">
+										<Link to="/">
 											<span>Insights</span>
-										</a>
+										</Link>
 										<ul className="sub-menu">
 											<li>
-												<a
-													href="/insights/sub-item-1"
+												<Link
+													to="/insights/sub-item-1"
 													className="title-sub">
 													<span>sub-item-1</span>
-												</a>
+												</Link>
 											</li>
 											<li>
-												<a
-													href="/insights/sub-item-1"
+												<Link
+													to="/insights/sub-item-1"
 													className="title-sub">
 													<span>sub-item-1</span>
-												</a>
+												</Link>
 											</li>
 											<li>
-												<a
-													href="/insights/sub-item-1"
+												<Link
+													to="/insights/sub-item-1"
 													className="title-sub">
 													<span>sub-item-1</span>
-												</a>
+												</Link>
 											</li>
 										</ul>
 									</li>
 									<li className="has-mnu">
-										<a href="/company">
+										<Link to="/">
 											<span>Company</span>
-										</a>
+										</Link>
 										<ul className="sub-menu">
 											<li>
-												<a href="/company/sub-item-1" className="title-sub">
+												<Link
+													to="/company/sub-item-1"
+													className="title-sub">
 													<span>sub-item-1</span>
-												</a>
+												</Link>
 											</li>
 											<li>
-												<a href="/company/sub-item-1" className="title-sub">
+												<Link
+													to="/company/sub-item-1"
+													className="title-sub">
 													<span>sub-item-1</span>
-												</a>
+												</Link>
 											</li>
 											<li>
-												<a href="/company/sub-item-1" className="title-sub">
+												<Link
+													to="/company/sub-item-1"
+													className="title-sub">
 													<span>sub-item-1</span>
-												</a>
+												</Link>
 											</li>
 										</ul>
 									</li>
 									<li className="">
-										<a href="/careers">
+										<Link to="/">
 											<span>Careers</span>
-										</a>
+										</Link>
 									</li>
 									<li className="">
-										<a href="/contact">
+										<Link to="/">
 											<span>Contact</span>
-										</a>
+										</Link>
 									</li>
 								</ul>
 							</div>
